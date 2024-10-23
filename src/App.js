@@ -1,23 +1,47 @@
-import logo from './logo.svg';
 import './App.css';
+import { Image, Button, Spin } from 'antd'
+import { useState } from 'react';
+
 
 function App() {
+
+  const [image, setImage] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
+  const getUrl = async () => {
+    try {
+      setIsLoading(true)
+      const urlFromApi = await fetch('https://dog.ceo/api/breeds/image/random')
+        .then(response => response.json())
+        .then(json => json.message)
+      setImage(urlFromApi)
+    }
+    catch (e) {
+      console.log(e)
+    }
+    finally {
+      setIsLoading(false)
+    }
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+      <h1>Bem vindo ao gerador de imagem mais fofo do mundo!</h1>
+
+
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', gap: '1rem' }}>
+        <Button type='primary' onClick={() => { getUrl() }} >Gerar imagem</Button>
+        <div style={{ maxWidth: '30%', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          {!isLoading ? <Image src={image} /> : <Spin style={{ width: '100%' }} />}
+        </div>
+      </div>
+
+
+
+
+
+
     </div>
   );
 }
