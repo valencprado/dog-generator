@@ -1,10 +1,8 @@
-import './App.css';
-import { Image, Button, Spin } from 'antd'
-import { useState } from 'react';
-
-
-function App() {
-
+import {useState} from 'react'
+import {Button, Image, Spin} from 'antd'
+import Navbar from '../navbar'
+export default function Home() {
+    
   const [image, setImage] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const getUrl = async () => {
@@ -26,9 +24,9 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
     
       <h1>Bem vindo ao gerador de imagem mais fofo do mundo!</h1>
-
 
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', gap: '1rem' }}>
         <Button type='primary' onClick={() => { getUrl() }} >Gerar imagem</Button>
@@ -37,13 +35,6 @@ function App() {
         </div>
       </div>
 
-
-
-
-
-
     </div>
-  );
+  )
 }
-
-export default App;
