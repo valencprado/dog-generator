@@ -24,7 +24,7 @@ export default function Home() {
 
   return (
     <div className="App">
-      <Navbar />
+      
     
       <h1>Bem vindo ao gerador de imagem mais fofo do mundo!</h1>
 
