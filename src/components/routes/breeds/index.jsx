@@ -1,5 +1,8 @@
+
 export default function Breeds() {
-    return(
+    return(  
+        <>
         <h1>Procure fotos da sua raça favorita!</h1>
+            </>
     )
 }
