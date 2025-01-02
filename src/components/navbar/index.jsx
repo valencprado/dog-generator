@@ -7,10 +7,6 @@ const items = [
     key: "home",
   },
   {
-    label: <Link to="/breeds" style={{fontSize: '1.2rem'}}>Raças</Link>,
-    key: "breed",
-  },
-  {
     label: <Link to="/about" style={{fontSize: '1.2rem'}}>Sobre</Link>,
     key: "all",
   },
