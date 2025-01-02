@@ -11,7 +11,5 @@ Clique no botão e veja um doguinho!
 
 
 ## Futuras features
-- [ ] museu com paginação
-- [ ] filtro por raça
 - [ ] criação de testes unitários
 - [ ] Action para validação de testes
