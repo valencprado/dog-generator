@@ -8,15 +8,15 @@ export default function About() {
       <Title>Quem não ama doguinhos?</Title>
     <div style={{display: "flex"}}>
       <div style={{ width: "70%" }}>
-        <div style={{ marginBottom: "1rem" }}>
-          <Text style={{ fontSize: "1.3rem" }}>
+        <div style={{ marginBottom: "1.1rem" }}>
+          <Text style={{ fontSize: "1.1rem" }}>
             Esse site foi feito para praticar conceitos básicos de
             desenvolvimento web em React e agradecer por cachorros existirem :)
           </Text>
         </div>
 
         <div style={{ marginBottom: "1rem" }}>
-          <Text style={{ fontSize: "1.3rem" }}>
+          <Text style={{ fontSize: "1.1rem" }}>
             Aproveite esta oportunidade e ajude um animal{" "}
             <a
               href="https://www.petlove.com.br/doacoes?campanha=dsa-todas-paginas-search&gad_source=1&gclid=Cj0KCQiAj9m7BhD1ARIsANsIIvB4rpuviyuywY3lcZ2hbzhHm5xi0SMYmaEzbnncCLb5r4J2xMAIo1EaAmNKEALw_wcB"
